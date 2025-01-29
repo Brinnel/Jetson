@@ -70,7 +70,7 @@ There are 2 types of SSD:
 1. NVMe - Supports
 2. SATA - Doesnt Support
 
-<img src="Images/NVME_SATA.png" alt="Storage" width="600" />
+<img src="NVME_SATA.png" alt="Storage" width="600" />
 
 
 ### SDK Manager  
