@@ -51,6 +51,7 @@ Need UBUNTU 20.04 OR 22.04
 SSD Manager Download:  
 https://www.youtube.com/watch?v=BaRdpSXU6EM&t=418s  
 22:52  
+29:49
 https://www.jetson-ai-lab.com/initial_setup_jon_sdkm.html#overall-flow-sdk-manager-method
 
 JetsonZoo  
