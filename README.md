@@ -53,6 +53,9 @@ https://www.youtube.com/watch?v=BaRdpSXU6EM&t=418s
 22:52  
 https://www.jetson-ai-lab.com/initial_setup_jon_sdkm.html#overall-flow-sdk-manager-method
 
+JetsonZoo  
+For all the tutorials and links for Python library downlaod.
+
 
 Advantages of SSD over micro SD:
 -Faster
@@ -69,6 +72,13 @@ There are 2 types of SSD:
 
 <img src="Images/NVME_SATA.png" alt="Storage" width="600" />
 
+
+### SDK Manager  
+NVIDIA SDK Manager as a one-stop shop that helps set up all the software you need to work with NVIDIA hardware (like Jetson Orin, GPUs, etc.).
+
+Imagine you're building a gaming PC. Instead of searching for each driver, tool, or setting manually, you use a single program that installs everything in one go. That’s what the SDK Manager does for developers—it downloads, installs, and sets up the required software and tools automatically.
+
+It saves time, reduces errors, and ensures everything is properly configured for development on NVIDIA platforms.
 
 ## REFERENCE:
 https://www.youtube.com/watch?v=-PjMC0gyH9s  
