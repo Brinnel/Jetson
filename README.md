@@ -63,7 +63,7 @@ Advantages of SSD over micro SD:
 - Cheaper
 - Reiable
 
-<img src="SSD.png" alt="Storage" width="600" />
+<img src="NVME_SATA.png" alt="Storage" width="600" />
 
 
 There are 2 types of SSD:
