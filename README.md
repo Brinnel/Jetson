@@ -36,7 +36,7 @@ https://www.jetson-ai-lab.com/
 - NVMe SSD for the OS and data, then you need to use **SDK Manager** to flash the latest JetPack on the NVMe SSD.
 - In case you have an x86 PC running Ubuntu 22.04 or 20.04, then you can flash your Jetson Orin Nano Developer Kit with the latest firmware and JetPack all at once using **NVIDIA SDK Manager**.
 
-<img src="Images/Storage.png" alt="Storage" width="900" />
+<img src="Storage.png" alt="Storage" width="900" />
 
 Here we have NVMe SSD, hence we need **NVIDIA SDK Manage**
 
@@ -63,7 +63,7 @@ Advantages of SSD over micro SD:
 - Cheaper
 - Reiable
 
-<img src="Images/SSD.png" alt="Storage" width="600" />
+<img src="SSD.png" alt="Storage" width="600" />
 
 
 There are 2 types of SSD:
