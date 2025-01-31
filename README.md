@@ -49,14 +49,14 @@ https://www.youtube.com/watch?v=BaRdpSXU6EM&t=418s
 https://www.jetson-ai-lab.com/initial_setup_jon_sdkm.html#overall-flow-sdk-manager-method
 
 JetsonZoo  
-For all the tutorials and links for Python library downlaod.
+For all the tutorials and links for Python library download.
 
 
 Advantages of SSD over micro SD:
 -Faster
-- Larger Capcity
+- Larger Capacity
 - Cheaper
-- Reiable
+- Reliable
 
 <img src="SSD.png" alt="Storage" width="600" />
 
@@ -90,7 +90,7 @@ It saves time, reduces errors, and ensures everything is properly configured for
 2. https://www.youtube.com/watch?v=fliiLNNoIWM  (Camera)
 3. https://www.youtube.com/watch?v=tTHzI6u2lmE  (Antenna)
 
-### COONECTION:
+### CONNECTION:
 
 1. Fix the Antenna and Camera
 2. Remove the HDMI connected from Monitor screen to CPU and connect it to Jetson
