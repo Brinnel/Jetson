@@ -126,7 +126,45 @@ nvcc --version
 dpkg -l | grep nvidia-jetpack
 ```
 
+#### CAMERA
 
+1. **Power Off the Jetson Device**
+   - Before connecting the camera, make sure the Jetson device is powered off.
+
+2. **Identify the CSI Port**
+   - Locate the CSI (Camera Serial Interface) port on your Jetson device.
+   - The CSI port is a small, thin slot labeled `CAM0` or `CAM1`.
+
+3. **Insert the Golden Ribbon Cable**
+   - Make sure the cable is in the correct orientation:
+     - The **golden contacts** should face **down** (towards the board).
+     - The **blue side** should face **up**.
+   - Carefully insert one end of the ribbon cable into the CSI port on the Jetson.
+   - Lock the connector by gently pressing down the black plastic clip.
+
+4. **Connect the Camera Module**
+   - Insert the other end of the golden ribbon cable into the camera module’s connector.
+   - Ensure the golden contacts face **down** towards the circuit board.
+   - Lock the connector by pressing the black clip.
+
+5. **Power On the Jetson Device**
+   - Once the camera is securely connected, turn on the Jetson device.
+
+6. **Verify Camera Detection**
+   - Open a terminal and run the following command:
+     ```bash
+     ls /dev/video*
+     ```
+     If the camera is detected, you should see a device like `/dev/video0`.
+
+     
+Code to start video:
+```bash
+git clone https://github.com/jetsonhacks/CSI-Camera
+cd /CSI-Camera
+python3 simple_camera.py
+
+  ```
 
 
 
