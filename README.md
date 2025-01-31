@@ -96,18 +96,38 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 lsb_release -a  
 ```
 
-#### TRANSFER:
+#### JETPACK:
+
+I was not able to install SDK manger on my device as the Jetson Orin NX is an ARM64 (aarch64) architecture device, while the SDK Manager package you downloaded is likely built for AMD64 (x86_64), which is meant for standard PCs. The SDK Manager cannot be installed directly on Jetson Orin NX because it is designed to run on a separate host PC (typically an Ubuntu x86_64 machine) for flashing and development.
+
+I have directly installed Jetpack:
 
 ```bash  
-wget https://developer.download.nvidia.com/sdkmanager/sdkmanager_1.9.3-10892_amd64.deb
-sudo dpkg -i sdkmanager_1.9.3-10892_amd64.deb
-sudo apt --fix-broken install
-sdkmanager --version
-
-
-
-
+sudo apt update
+sudo apt upgrade -y
+sudo apt install nvidia-jetpack
 ```
+This will install:
+  
+1. CUDA
+2. TensorRT
+3. cuDNN
+4. OpenCV
+5. Multimedia API
+6. VPI (Vision Programming Interface)
+
+Verify the installation:
+- Check if CUDA is installed properly:
+```bash  
+nvcc --version
+```
+- Check the installed JetPack version:
+```bash  
+dpkg -l | grep nvidia-jetpack
+```
+
+
+
 
 
 ## REFERENCE:
