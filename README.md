@@ -89,7 +89,7 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 6. Connect to the wifi
 <img src="wifi1.jpeg" alt="Storage" width="600" />
 <img src="wifi2.jpeg" alt="Storage" width="600" />
-8. Check Ubuntu version:  
+7. Check Ubuntu version:  
 ```bash  
 lsb_release -a  
 ```
