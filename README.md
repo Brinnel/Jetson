@@ -8,12 +8,6 @@ https://www.jetson-ai-lab.com/
 
 - Kit to start your journey of local generative AI evaluation and development  
 
-### PACKING LIST:
-- Jetson Orin NX core module
-- Cooling fan
-- Network card antenna
-- Jetson Orin NX expansion board
-- Power supply
 
 ### APPLICATIONS:
 #### LLM (Large language Models):
@@ -80,6 +74,31 @@ NVIDIA SDK Manager as a one-stop shop that helps set up all the software you nee
 Imagine you're building a gaming PC. Instead of searching for each driver, tool, or setting manually, you use a single program that installs everything in one go. That’s what the SDK Manager does for developers—it downloads, installs, and sets up the required software and tools automatically.
 
 It saves time, reduces errors, and ensures everything is properly configured for development on NVIDIA platforms.
+
+### PACKING LIST:
+- Jetson Orin NX core module
+- Cooling fan
+- Network card antenna
+- Jetson Orin NX expansion board
+- Power supply
+
+
+## SET UP:
+
+### CASING:
+1. https://www.youtube.com/watch?v=zxMn6U1DauE  (Board)
+2. https://www.youtube.com/watch?v=fliiLNNoIWM  (Camera)
+3. https://www.youtube.com/watch?v=tTHzI6u2lmE  (Anttena)
+
+### COONECTION:
+
+1. Fix the Antenna and Camera
+2. Remove the HDMI connected from Monitor screen to CPU and connect it to Jetson
+3. Remove the Keyboard and mouse connected from Monitor screen to CPU and connect it to Jetson
+4. Connect the ethernet wire from CPU to the Jetson
+5. Connect the Power Supply
+6. 
+
 
 ## REFERENCE:
 https://www.youtube.com/watch?v=-PjMC0gyH9s  
