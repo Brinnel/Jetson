@@ -99,13 +99,12 @@ lsb_release -a
 #### TRANSFER:
 
 ```bash  
-sudo apt update && sudo apt upgrade -y
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt update
-sudo apt-add-repository 'deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /'
-sudo apt update
-sudo apt-get install -y sdkmanager
+wget https://developer.download.nvidia.com/sdkmanager/sdkmanager_1.9.3-10892_amd64.deb
+sudo dpkg -i sdkmanager_1.9.3-10892_amd64.deb
+sudo apt --fix-broken install
+sdkmanager --version
+
+
 
 
 ```
