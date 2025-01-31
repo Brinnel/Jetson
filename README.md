@@ -85,16 +85,15 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 1. Attach the antenna and camera.
 2. Disconnect the HDMI cable from the CPU and connect it to the Jetson.
 3. Disconnect the keyboard and mouse from the CPU and connect them to the Jetson.
-4. Connect the power supply.
-5. Check Ubuntu version:
+5. Connect the power supply.
+6. Connect to the wifi
+<img src="wifi1.jpeg" alt="Storage" width="600" />
+<img src="wifi2.jpeg" alt="Storage" width="600" />
+8. Check Ubuntu version:
 ```bash
 lsb_release -a
 ```
 
-### WIFI CONNECTION:
-
-<img src="wifi1.jpeg" alt="Storage" width="600" />
-<img src="wifi2.jpeg" alt="Storage" width="600" />
 
 
 ## REFERENCE:
