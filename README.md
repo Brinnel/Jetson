@@ -88,7 +88,7 @@ It saves time, reduces errors, and ensures everything is properly configured for
 ### CASING:
 1. https://www.youtube.com/watch?v=zxMn6U1DauE  (Board)
 2. https://www.youtube.com/watch?v=fliiLNNoIWM  (Camera)
-3. https://www.youtube.com/watch?v=tTHzI6u2lmE  (Anttena)
+3. https://www.youtube.com/watch?v=tTHzI6u2lmE  (Antenna)
 
 ### COONECTION:
 
