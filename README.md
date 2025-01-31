@@ -86,6 +86,10 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 2. Disconnect the HDMI cable from the CPU and connect it to the Jetson.
 3. Disconnect the keyboard and mouse from the CPU and connect them to the Jetson.
 4. Connect the power supply.
+5. Check Ubuntu version:
+```bash
+lsb_release -a
+```
 
 ### WIFI CONNECTION:
 
