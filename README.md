@@ -96,6 +96,13 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 lsb_release -a  
 ```
 
+#### TRANSFER:
+
+```bash  
+sudo apt-add-repository 'deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/ /'
+sudo apt update
+
+```
 
 
 ## REFERENCE:
