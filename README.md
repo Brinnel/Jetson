@@ -85,8 +85,13 @@ Imagine you're building a gaming PC. Instead of searching for each driver, tool,
 1. Attach the antenna and camera.
 2. Disconnect the HDMI cable from the CPU and connect it to the Jetson.
 3. Disconnect the keyboard and mouse from the CPU and connect them to the Jetson.
-4. Connect the Ethernet cable from the CPU to the Jetson.
-5. Connect the power supply.
+4. Connect the power supply.
+
+### WIFI CONNECTION:
+
+<img src="wifi1.jpeg" alt="Storage" width="600" />
+<img src="wifi2.jpeg" alt="Storage" width="600" />
+
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
