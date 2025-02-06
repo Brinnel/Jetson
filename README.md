@@ -184,7 +184,7 @@ cd jetson-fan-ctl
 ```sh
 jtop
 ```
-```
+```sh
 Output:
 
 <img src="CPU_GPU.png" alt="Storage" width="800" />
