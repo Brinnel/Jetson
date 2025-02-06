@@ -189,39 +189,39 @@ Output:
 <img src="CPU_GPU.png" alt="Storage" width="800" />
 
 
-**Top Section - System Overview**
-**Model:** NVIDIA Orin NX Developer Kit
-**JetPack Version:** 5.1.3 (L4T 35.5.0)
-**CPU Usage:** Displays CPU usage for all cores with clock speeds (e.g., 2.0GHz).
-**Memory Usage:** Shows total and used RAM.
-**Swap Usage:** Displays swap memory usage.
-**Fan Speed:** 47.1% running at 2741 RPM.
-**Jetson Clocks:** running (indicates maximum performance mode is enabled).
-**Power Mode:** MAXN (maximum power mode).
-**Uptime:** 0 days 0:39:9 (device has been running for about 39 minutes).
+**Top Section - System Overview**  
+**Model:** NVIDIA Orin NX Developer Kit  
+**JetPack Version:** 5.1.3 (L4T 35.5.0)  
+**CPU Usage:** Displays CPU usage for all cores with clock speeds (e.g., 2.0GHz).  
+**Memory Usage:** Shows total and used RAM.  
+**Swap Usage:** Displays swap memory usage.  
+**Fan Speed:** 47.1% running at 2741 RPM.  
+**Jetson Clocks:** running (indicates maximum performance mode is enabled).  
+**Power Mode:** MAXN (maximum power mode).  
+**Uptime:** 0 days 0:39:9 (device has been running for about 39 minutes).  
 
 **Middle Section - Process Table**
-Shows active processes using CPU/GPU:
-**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM.
-**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display).
-**nvargus-daemon:** Camera-related process.
-**ollama:** AI-related process.
+Shows active processes using CPU/GPU:  
+**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM.  
+**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display).  
+**nvargus-daemon:** Camera-related process.  
+**ollama:** AI-related process.  
 
 **Bottom Section - Hardware & Sensors**
-**[HW engines]:** Shows status of hardware accelerators like:
-DLA (Deep Learning Accelerator): Off
-NVENC/NVDEC (Video Encoding/Decoding): Off
-VIC (Vision Image Processor): Off
-**SE (Security Engine):** Running at 473 MHz
+**[HW engines]:** Shows status of hardware accelerators like:  
+DLA (Deep Learning Accelerator): Off  
+NVENC/NVDEC (Video Encoding/Decoding): Off  
+VIC (Vision Image Processor): Off  
+**SE (Security Engine):** Running at 473 MHz  
 **[Sensor Temperatures]:**
-CPU: 50.78°C
-GPU: 49.62°C
-SOC (System on Chip): ~ 50°C
-TJ (Junction Temperature): 51.69°C
+CPU: 50.78°C  
+GPU: 49.62°C   
+SOC (System on Chip): ~ 50°C  
+TJ (Junction Temperature): 51.69°C  
 **[Power Usage]:**
-CPU/GPU: 2.1W
-SOC: 3.2W
-Total Power Consumption (VDD_IN): 9.0W
+CPU/GPU: 2.1W  
+SOC: 3.2W  
+Total Power Consumption (VDD_IN): 9.0W  
 
 ### 3. Install Required Dependencies
 ```sh
