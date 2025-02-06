@@ -192,7 +192,7 @@ Output:
 **Top Section - System Overview**  
 **Model:** NVIDIA Orin NX Developer Kit  
 **JetPack Version:** 5.1.3 (L4T 35.5.0)  
-**CPU Usage:** Displays CPU usage for all cores with clock speeds (e.g., 2.0GHz).  
+**CPU Usage:** Displays CPU usage[CPU Usage](#cpu-usage) for all cores with clock speeds (e.g., 2.0GHz).  
 **Memory Usage:** Shows total and used RAM.  
 **Swap Usage:** Displays swap memory usage.  
 **Fan Speed:** 47.1% running at 2741 RPM.  
@@ -207,7 +207,7 @@ Shows active processes using CPU/GPU:
 **nvargus-daemon:** Camera-related process.  
 **ollama:** AI-related process.  
 
-**Bottom Section - Hardware & Sensors**
+**Bottom Section - Hardware & Sensors**  
 **[HW engines]:** Shows status of hardware accelerators like:  
 DLA (Deep Learning Accelerator): Off  
 NVENC/NVDEC (Video Encoding/Decoding): Off  
@@ -324,4 +324,17 @@ Press `Ctrl + C` to close the window.
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
 - [Jetson AI Lab - Initial Setup](https://www.jetson-ai-lab.com/initial_setup_jon.html)  
-- **[Yahboom Jetson Orin NX Study Guide](http://www.yahboom.net/study/Jetson-Orin-NX)**  
+- **[Yahboom Jetson Orin NX Study Guide](http://www.yahboom.net/study/Jetson-Orin-NX)**
+
+## HYPERLINK
+### CPU Usage
+**RAM (System Memory) -** 71.3MB in your case  
+Used by the CPU for running applications and system processes.    
+Stores general-purpose data like program instructions, variables, and OS tasks.  
+Located on your Jetson’s main memory (LPDDR4/5, DRAM, etc.)  
+Example: Running a web browser, terminal, or background services. 
+
+**GPU RAM (VRAM) -** 87.1MB in your case  
+Used by the GPU (Graphics Processing Unit) for graphical or parallel computing tasks.  
+Stores textures, images, videos, deep learning models, and CUDA computations.  
+Located in the shared memory of Jetson’s unified architecture (Jetson devices don’t have dedicated VRAM; they share memory with the system).  
