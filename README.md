@@ -184,10 +184,11 @@ cd jetson-fan-ctl
 ```sh
 jtop
 ```
-
+```
 Output:
 
 <img src="CPU_GPU.png" alt="Storage" width="800" />
+```
 
 ### 3. Install Required Dependencies
 ```sh
