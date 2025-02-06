@@ -185,6 +185,10 @@ cd jetson-fan-ctl
 jtop
 ```
 
+Output:
+
+<img src="CPU_GPU.png" alt="Storage" width="600" />
+
 ### 3. Install Required Dependencies
 ```sh
 sudo apt-get install git cmake python3-dev libhdf5-serial-dev hdf5-tools libatlas-base-dev gfortran
