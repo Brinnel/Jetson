@@ -187,7 +187,7 @@ jtop
 
 Output:
 
-<img src="CPU_GPU.png" alt="Storage" width="600" />
+<img src="CPU_GPU.png" alt="Storage" width="800" />
 
 ### 3. Install Required Dependencies
 ```sh
