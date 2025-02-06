@@ -168,6 +168,121 @@ python3 simple_camera.py
 
 
 
+# PoseNet Installation on Jetson Nano (Micro USB Version)
+
+## OS: JetPack 4.6
+
+### 1. Enable Temperature Control (if a fan is connected)
+```sh
+sudo apt install python3-dev
+git clone https://github.com/Pyrestone/jetson-fan-ctl.git
+cd jetson-fan-ctl
+./install.sh
+```
+
+### 2. Monitor Jetson Nano (RAM, CPU, GPU, and other parameters)
+```sh
+jtop
+```
+
+### 3. Install Required Dependencies
+```sh
+sudo apt-get install git cmake python3-dev libhdf5-serial-dev hdf5-tools libatlas-base-dev gfortran
+```
+
+### 4. Install Pip for Python 3
+```sh
+sudo apt install python3-pip
+sudo -H pip3 install -U jetson-stats
+```
+
+### 5. Jetson Inference Setup
+#### 5.1 Update System and Install Tools
+```sh
+sudo apt-get update
+sudo apt-get install git cmake
+```
+
+#### 5.2 Clone the Repository
+```sh
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+```
+
+### 6. Install Additional Libraries
+```sh
+sudo apt-get install libpython3-dev python3-numpy
+```
+
+### 7. CMake Configuration
+```sh
+mkdir build
+cd build
+cmake ../
+```
+
+### 8. Download Models
+```sh
+cd jetson-inference/tools
+./download-models.sh
+```
+
+### 9. Install PyTorch
+#### 9.1 Execute Installation
+```sh
+cd jetson-inference/build
+./install-pytorch.sh
+```
+
+#### 9.2 Verify Installation
+```sh
+make -j8
+sudo make install
+sudo ldconfig
+```
+
+### 10. Run a Model
+```sh
+cd /home/ialab/jetson-inference/build/aarch64/bin
+python3 "model_name_to_run"
+```
+
+### 11. View Development Board Statistics
+```sh
+jtop
+```
+
+## Optional: Increase RAM via Swap
+### 1. Disable `nvzramconfig`
+```sh
+sudo systemctl disable nvzramconfig
+```
+
+### 2. Create a 4GB Swap File
+```sh
+sudo fallocate -l 4g /mnt/4g.swap
+sudo mkswap /mnt/4g.swap
+sudo swapon /mnt/4g.swap
+```
+
+### 3. Make Swap Permanent
+```sh
+sudo gedit /etc/fstab
+```
+Add this line at the end of the file:
+```
+/mnt/4g.swap   none    swap    sw      0       0
+```
+
+## Check Camera Functionality
+```sh
+gst-launch-1.0 nvarguscamerasrc ! nvoverlaysink
+```
+Press `Ctrl + C` to close the window.
+
+
+
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
 - [Jetson AI Lab - Initial Setup](https://www.jetson-ai-lab.com/initial_setup_jon.html)  
