@@ -168,7 +168,8 @@ python3 simple_camera.py
 
 
 
-# PoseNet Installation on Jetson Nano (Micro USB Version)
+# PoseNet Installation on Jetson Nano (Micro USB Version) ([System Crashed](#system-crashed) when performed this as entire memory space was occupied)
+
 
 ## OS: JetPack 4.6
 
@@ -399,3 +400,27 @@ Example: When you open an app, GNOME-Shell handles the smooth animation.
 **Xorg** → Like a projector operator   
 Makes sure the movie (your screen) is displayed properly.  
 Example: If you move a window, Xorg ensures it appears in the right place.  
+
+### System Crashed
+
+1.
+```sh
+ssh <username>@<ip_address>
+```
+Eg: ssh jetson@172.29.69.88
+
+For ip address:
+```sh
+hostname -I
+
+```
+
+2. 
+- Connect the usb port from the jetson to pc and download putty
+- In the PC go to control panel --> Networ and internet --> network and sharing center --> change advanced sharing settings -->private networks
+  Enable: Network Discovery, File and printer sharing
+- Go to Device Manager --> Ports(COM & LPT) --> Note the COM port number (Eg: COM4)
+- Open Putty --> select serial --> enter COM number --> Buad rate set it to 115200
+- Enter User name : Jetson
+  Password : yahboom
+ 
