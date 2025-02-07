@@ -283,7 +283,9 @@ sudo ldconfig
 
 ### 10. Run a Model
 ```sh
-cd /home/ialab/jetson-inference/build/aarch64/bin
+cd
+cd jetson-fan-ctl/jetson-inference/build/aarch64/bin
+#cd /home/ialab/jetson-inference/build/aarch64/bin
 python3 "model_name_to_run"
 ```
 
