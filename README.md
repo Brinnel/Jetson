@@ -193,17 +193,18 @@ Output:
 **Model:** NVIDIA Orin NX Developer Kit  
 **JetPack Version:** 5.1.3 (L4T 35.5.0)  
 **CPU Usage:** Displays [CPU Usage](#cpu-usage) for all cores with [Clock Speeds](#clock-speeds) (e.g., 2.0GHz).  
-**Memory Usage:** Shows total and used RAM [Memory Usage](#memory-usage)
-**Swap Usage:** Displays swap memory usage.  
+**Memory Usage:** Shows total and used RAM [Memory Usage](#memory-usage)  
+**Swap Usage:** Displays swap memory usage[Swap Usage](#swap-image)  
 **Fan Speed:** 47.1% running at 2741 RPM.  
-**Jetson Clocks:** running (indicates maximum performance mode is enabled).  
+**Jetson Clocks:** running (indicates maximum performance mode is enabled). 
+**EMC:**  [EMC](#emc)
 **Power Mode:** MAXN (maximum power mode).  
 **Uptime:** 0 days 0:39:9 (device has been running for about 39 minutes).  
 
 **Middle Section - Process Table**
 Shows active processes using CPU/GPU:  
-**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM.  
-**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display).  
+**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM[GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
+**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display)[GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
 **nvargus-daemon:** Camera-related process.  
 **ollama:** AI-related process.  
 
@@ -362,4 +363,37 @@ Great question! The reason why the total CPU memory usage **adds up to more than
 
 **Overestimation by Tools**     
    - Some monitoring tools count **reserved but unused** memory as "used."    
-   - Example: A program **allocates 500MB**, but actually **uses only 300MB**—yet, it still appears as 500MB.    
+   - Example: A program **allocates 500MB**, but actually **uses only 300MB**—yet, it still appears as 500MB.
+
+### Swap Usage
+When RAM usage is high, the OS moves inactive memory pages to swap space.  
+This frees up physical RAM for active processes.  
+If a swapped process is needed again, it is moved back into RAM.  
+Excessive swap usage can slow down the system   
+
+### EMC:
+EMC (External Memory Controller) is responsible for managing access to system memory (RAM) on Jetson devices. It controls how fast data is read and written between the CPU, GPU, and RAM.  
+
+
+### GNOME-Shell & Xorg
+**GNOME-Shell** → The desktop interface (buttons, animations, effects).  
+Uses RAM (CPU memory) to process desktop logic.  
+Uses GPU RAM (VRAM) to render graphics smoothly. 
+
+
+**Xorg** → The display system (shows windows, handles input like keyboard/mouse).  
+Uses RAM for basic display processing.  
+Uses GPU RAM to draw everything on the screen.  
+Main Difference:  
+GNOME-Shell → Controls how things look and move (animations, UI).  
+Xorg → Controls what is shown on the screen (windows, input handling).  
+
+Imagine your Jetson is a movie theater:
+
+**GNOME-Shell** → Like a movie director  
+Decides how things look, animations, and effects.  
+Example: When you open an app, GNOME-Shell handles the smooth animation.   
+
+**Xorg** → Like a projector operator   
+Makes sure the movie (your screen) is displayed properly.  
+Example: If you move a window, Xorg ensures it appears in the right place.  
