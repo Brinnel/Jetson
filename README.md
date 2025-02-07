@@ -402,6 +402,7 @@ Makes sure the movie (your screen) is displayed properly.
 Example: If you move a window, Xorg ensures it appears in the right place.  
 
 ### System Crashed
+Recover from system crash
 
 1.
 ```sh
