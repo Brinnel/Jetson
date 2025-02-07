@@ -185,7 +185,7 @@ cd jetson-fan-ctl
 jtop
 ```
 
-Output:
+
 <img src="CPU_GPU.png" alt="Storage" width="800" />
 
 
@@ -197,14 +197,14 @@ Output:
 **Swap Usage:** Displays swap memory usage[Swap Usage](#swap-image)  
 **Fan Speed:** 47.1% running at 2741 RPM.  
 **Jetson Clocks:** running (indicates maximum performance mode is enabled). 
-**EMC:**  [EMC](#emc)
+**EMC:** The current EMC frequency is 204 MHz, while the maximum it can reach is 3.2 GHz [EMC](#emc)
 **Power Mode:** MAXN (maximum power mode).  
 **Uptime:** 0 days 0:39:9 (device has been running for about 39 minutes).  
 
 **Middle Section - Process Table**
 Shows active processes using CPU/GPU:  
-**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM[GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
-**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display)[GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
+**gnome-shell:** Uses 71.3MB RAM and 87.1MB GPU RAM [GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
+**Xorg:** Uses 16.7MB RAM and 85.5MB GPU RAM (handles graphical display) [GNOME-Shell & Xorg](#gnome-shell-&-xorg)  
 **nvargus-daemon:** Camera-related process.  
 **ollama:** AI-related process.  
 
