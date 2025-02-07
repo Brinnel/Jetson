@@ -192,8 +192,8 @@ Output:
 **Top Section - System Overview**  
 **Model:** NVIDIA Orin NX Developer Kit  
 **JetPack Version:** 5.1.3 (L4T 35.5.0)  
-**CPU Usage:** Displays CPU usage[CPU Usage](#cpu-usage) for all cores with clock speeds (e.g., 2.0GHz).  
-**Memory Usage:** Shows total and used RAM.  
+**CPU Usage:** Displays [CPU Usage](#cpu-usage) for all cores with [Clock Speeds](#clock-speeds) (e.g., 2.0GHz).  
+**Memory Usage:** Shows total and used RAM [Memory Usage](#memory-usage)
 **Swap Usage:** Displays swap memory usage.  
 **Fan Speed:** 47.1% running at 2741 RPM.  
 **Jetson Clocks:** running (indicates maximum performance mode is enabled).  
@@ -334,7 +334,32 @@ Stores general-purpose data like program instructions, variables, and OS tasks.
 Located on your Jetson’s main memory (LPDDR4/5, DRAM, etc.)  
 Example: Running a web browser, terminal, or background services. 
 
+### GPU Usage
 **GPU RAM (VRAM) -** 87.1MB in your case  
 Used by the GPU (Graphics Processing Unit) for graphical or parallel computing tasks.  
 Stores textures, images, videos, deep learning models, and CUDA computations.  
 Located in the shared memory of Jetson’s unified architecture (Jetson devices don’t have dedicated VRAM; they share memory with the system).  
+
+### Clock Speeds
+Jetson Clocks refers to the performance mode of the NVIDIA Jetson device where all CPU, GPU, and memory clocks are set to their maximum possible frequencies for peak performance.    
+**Purpose of a Clock in Computing**  
+**Timing & Synchronization** → Ensures all operations happen at the correct time and in order.    
+**Performance Control** → Higher clock speeds mean faster processing, while lower speeds save power.  
+**Power Efficiency** → The system adjusts clock speeds dynamically to balance performance and energy consumption.  
+
+### Memory Usage
+The reason why the total CPU memory usage adds up to more than the actual memory used is because of shared memory, caching, and memory overestimation.  
+Great question! The reason why the total CPU memory usage **adds up to more than the actual memory used** is because of **shared memory, caching, and memory overestimation.**  
+
+### **Why This Happens:**  
+**Shared Memory**   
+   - Some processes **share** memory instead of using separate copies.    
+   - Example: If multiple apps use the **same system library**, they don’t load it multiple times.    
+
+**Cached Memory**   
+   - Linux **keeps unused memory for caching** to speed things up, but it can be freed when needed.    
+   - Example: If you **reopen a recently closed app**, it loads faster because it’s cached.    
+
+**Overestimation by Tools**     
+   - Some monitoring tools count **reserved but unused** memory as "used."    
+   - Example: A program **allocates 500MB**, but actually **uses only 300MB**—yet, it still appears as 500MB.    
