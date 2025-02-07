@@ -318,7 +318,7 @@ Add this line at the end of the file:
 
 ## Check Camera Functionality
 ```sh
-gst-launch-1.0 nvarguscamerasrc ! nvoverlaysink
+gst-launch-1.0 nvarguscamerasrc ! nvvidconv ! videoconvert ! xvimagesink
 ```
 Press `Ctrl + C` to close the window.
 
