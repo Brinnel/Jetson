@@ -50,7 +50,18 @@ if cap.isOpened():
         # 'frame' is the captured image in BGR color space
         # Convert the captured frame from BGR to grayscale (this helps reduce computational complexity)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        edges = cv2.Canny(frame, 50, 150)
+
+
+        # Edge Detection (Canny) → Detects object boundaries
+        edges = cv2.Canny(frame, 50, 100) 
+
+
+        # Blurring (Gaussian, Median) → Reduces noise
+        blurred = cv2.GaussianBlur(frame, (7,7), 0)
+
+        Thresholding → Binarizes an image (black and white)
+        _, thresh = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY)
+
 
         # Display the original color frame in a window titled "Original"
         cv2.imshow("Original", frame)
@@ -58,7 +69,14 @@ if cap.isOpened():
         # Display the grayscale frame in a window titled "Grayscale"
         cv2.imshow("Grayscale", gray)
 
+        # Display the canny edge detection frame in a window titled "Canny Edge"
         cv2.imshow("Canny Edge", edges)
+
+        # Display the Gaussian Blur frame in a window titled "Gaussian Blur"
+        cv2.imshow("Gaussian Blur", blurred)
+
+        # Display the Binary threshold frame in a window titled "Binary Threshold"
+        cv2.imshow("Binary Threshold", thresh)
 
         # Wait for 1 millisecond for a key press event and check if it's 'q'
         # If the user presses 'q', break out of the loop and end the video capture
