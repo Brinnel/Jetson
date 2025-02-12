@@ -384,7 +384,7 @@ sudo apt-get install python3-opencv
 git clone https://github.com/Brinnel/Jetson.git
 cd Jetson
 ```
-<img src="Grey_output" alt="Grey Output" width="600" />
+<img src="Grey_output.png" alt="Grey Output" width="600" />
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
