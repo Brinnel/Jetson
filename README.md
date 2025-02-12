@@ -374,7 +374,7 @@ vim <file_name>
 
 In vim, press i to start editing, type your content, then press ESC to exit insert mode. To save and quit, type :wq and press Enter.
 
-### Python Code to Capture & Convert Camera Frame to Grayscale
+### Python Code to Capture and pre process the video frame
 Install OpenCV
 ```sh
 sudo apt-get install python3-opencv
@@ -384,7 +384,7 @@ sudo apt-get install python3-opencv
 git clone https://github.com/Brinnel/Jetson.git
 cd Jetson
 ```
-<img src="grey_output.png" alt="Grey Output" width="600" />
+<img src="pre_process.png" alt="Grey Output" width="600" />
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
