@@ -60,7 +60,7 @@ if cap.isOpened():
         blurred = cv2.GaussianBlur(frame, (7,7), 0)
 
         # Thresholding → Binarizes an image (black and white)
-        _, thresh = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY)
+        _, thresh = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY)
 
 
         # Display the original color frame in a window titled "Original"
