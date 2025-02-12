@@ -50,12 +50,15 @@ if cap.isOpened():
         # 'frame' is the captured image in BGR color space
         # Convert the captured frame from BGR to grayscale (this helps reduce computational complexity)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        edges = cv2.Canny(frame, 50, 150)
 
         # Display the original color frame in a window titled "Original"
         cv2.imshow("Original", frame)
 
         # Display the grayscale frame in a window titled "Grayscale"
         cv2.imshow("Grayscale", gray)
+
+        cv2.imshow("Canny Edge", edges)
 
         # Wait for 1 millisecond for a key press event and check if it's 'q'
         # If the user presses 'q', break out of the loop and end the video capture
