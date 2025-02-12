@@ -374,8 +374,16 @@ vim <file_name>
 
 In vim, press i to start editing, type your content, then press ESC to exit insert mode. To save and quit, type :wq and press Enter.
 
+### Python Code to Capture & Convert Camera Frame to Grayscale
+Install OpenCV
+```sh
+sudo apt-get install python3-opencv
+```
+
+```sh
 
 
+```
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
