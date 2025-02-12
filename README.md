@@ -353,7 +353,7 @@ mkdir <folder_name>
 ```
 2. Delete Folder
 ```sh
-rm <folder_name>
+rm -rf <folder_name>
 ```
 3. Change directory
 ```sh
