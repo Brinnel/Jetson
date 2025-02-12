@@ -346,6 +346,35 @@ gst-launch-1.0 nvarguscamerasrc ! nvvidconv ! videoconvert ! xvimagesink
 ```
 Press `Ctrl + C` to close the window.
 
+## COMANDS ON LINUX:
+1. Make Folder
+```sh
+mkdir <folder_name>
+```
+2. Delete Folder
+```sh
+rm <folder_name>
+```
+3. Change directory
+```sh
+cd <folder_name>
+```
+4. List files in the directory
+```sh
+ls
+```
+5. Crete file
+```sh
+touch <file_name>
+```
+6. Open file for editing
+```sh
+vim <file_name>
+```
+
+In vim, press i to start editing, type your content, then press ESC to exit insert mode. To save and quit, type :wq and press Enter.
+
+
 
 
 ## REFERENCE:
