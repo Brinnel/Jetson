@@ -375,76 +375,28 @@ sudo systemctl disable nvzramconfig
 ```sh
 sudo fallocate -l 4g /mnt/4g.swap
 sudo mkswap /mnt/4g.swap
-Installing PoseNet on Jetson Nano (Micro USB Version)
-OS: JetPack 4.6
-1. Enable Temperature Control (if a fan is connected)
-sudo apt install python3-dev
-git clone https://github.com/Pyrestone/jetson-fan-ctl.git
-cd jetson-fan-ctl
-./install.sh
-2. Monitor Jetson Nano Performance
-To check RAM, CPU usage, GPU, and other parameters, open a terminal and run:
-jtop
-3. Set Up the Support Environment
-Install necessary dependencies:
-sudo apt-get install git cmake
-sudo apt-get install python3-dev
-sudo apt-get install libhdf5-serial-dev hdf5-tools
-sudo apt-get install libatlas-base-dev gfortran
-4. Install pip for Python 3
-sudo apt install python3-pip
-sudo -H pip3 install -U jetson-stats
-5. Install Jetson Inference
-5.1 Update System and Install Tools
-sudo apt-get update
-sudo apt-get install git cmake
-5.2 Clone the Repository
-From the downloads folder, open a terminal and run:
-git clone https://github.com/dusty-nv/jetson-inference
-cd jetson-inference
-git submodule update --init
-6. Install Additional Libraries
-sudo apt-get install libpython3-dev python3-numpy
-7. Configure CMake
-mkdir build
-cd build
-cmake ../
-8. Download Required Models
-cd jetson-inference/tools
-./download-models.sh
-9. Install PyTorch
-From the jetson-inference/build folder, execute:
-./install-pytorch.sh
-9.1 Verify Installation
-make -j8
-sudo make install
-sudo ldconfig
-10. Run a Model
-Navigate to the build folder and open a terminal:
-cd /home/ialab/jetson-inference/build/aarch64/bin
-ls
-python3 "model_name_to_run"
-Monitor Jetson Nano Performance While Running
-To view CPU, GPU, temperature, and RAM usage, open a new terminal and run:
-jtop
-Optional: Increase RAM Using Swap Memory
-1. Disable nvzramconfig
-sudo systemctl disable nvzramconfig
-2. Create Swap File
-sudo fallocate -l 4g /mnt/4g.swap
-sudo mkswap /mnt/4g.swap
 sudo swapon /mnt/4g.swap
-3. Add Swap to fstab
+```
+
+### 3. Add Swap to fstab
+```sh
 sudo gedit /etc/fstab
+```
+
 Add the following line at the end of the file:
+```sh
 /mnt/4g.swap none swap sw 0 0
+```
+
 Check Camera Functionality
 Run the following command:
+```sh
 gst-launch-1.0 nvarguscamerasrc ! nvoverlaysink
+```
 To close the window, press Ctrl + C.
 This guide provides step-by-step instructions to set up and run PoseNet on the Jetson Nano. Ensure
 all dependencies are installed properly before running models.
-
+```sh
 sudo swapon /mnt/4g.swap
 ```
 
