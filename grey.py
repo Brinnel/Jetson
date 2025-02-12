@@ -59,7 +59,7 @@ if cap.isOpened():
         # Blurring (Gaussian, Median) → Reduces noise
         blurred = cv2.GaussianBlur(frame, (7,7), 0)
 
-        Thresholding → Binarizes an image (black and white)
+        # Thresholding → Binarizes an image (black and white)
         _, thresh = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY)
 
 
