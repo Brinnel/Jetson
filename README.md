@@ -381,6 +381,8 @@ sudo apt-get install python3-opencv
 ```
 
 ```sh
+git clone https://github.com/Brinnel/Jetson.git
+cd Jetson
 
 
 ```
