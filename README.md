@@ -374,6 +374,14 @@ vim <file_name>
 
 In vim, press i to start editing, type your content, then press ESC to exit insert mode. To save and quit, type :wq and press Enter.
 
+
+## IMAE PROCESSING ALGORITHMS
+
+```sh
+git clone https://github.com/Brinnel/Jetson.git
+cd Jetson
+```
+
 ### Python Code to Capture and pre process the video frame
 Install OpenCV
 ```sh
@@ -381,10 +389,18 @@ sudo apt-get install python3-opencv
 ```
 
 ```sh
-git clone https://github.com/Brinnel/Jetson.git
-cd Jetson
+python3 pre_process.py
 ```
+
 <img src="pre_process.png" alt="Grey Output" width="600" />
+
+
+### Python Code to Capture Face and eyes in the video frame using Haar cascades
+
+```sh
+python3 Haar_face_detecton.py
+```
+<img src="Haar_face_eye.png" alt="Haar_face_eye_detection" width="600" />
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
