@@ -400,7 +400,7 @@ python3 pre_process.py
 ```sh
 python3 Haar_face_detecton.py
 ```
-<img src="Haar_face_eye.png" alt="Haar_face_eye_detection" width="600" />
+<img src="Haar_face_eye.png" alt="Haar_face_eye_detection" width="400" />
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
