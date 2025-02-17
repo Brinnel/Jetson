@@ -447,6 +447,10 @@ minNeighbors controls how many overlapping rectangles are needed.
 3-4	Balanced detection, some false positives possible.
 5-6	Accurate detection, but may miss small faces.
 
+If there are multiple faces, faces looks like:
+faces = [(100, 50, 200, 200), (300, 80, 180, 180), (500, 120, 220, 220)]
+
+
 
 **Draw Rectangles Around Faces**
 ```sh
@@ -459,6 +463,19 @@ Draws a blue rectangle (color (255, 0, 0)) around detected faces on the original
 x, y → The top-left corner of the face.
 w, h → The width and height of the face.
 
+Eg: (x=100, y=50, w=200, h=200)
+
+Top-left: (100, 50)
+Bottom-right: (100+200, 50+200) → (300, 250)
+
+
+(100, 50) *--------------------*
+           |                    |
+           |    Detected Face    |
+           |                    |
+           *--------------------* (300, 250)
+
+
 **Detect and Draw Rectangles Around Eyes**
 ```sh
 roi_gray = gray[y : y + h, x : x + w]
@@ -469,11 +486,29 @@ eyes = eye_cascade.detectMultiScale(roi_gray)
 Extracts the Region of Interest (ROI) of the face.
 Performs eye detection within the ROI.
 
+gray[y : y + h, x : x + w]
+
+    Extracts the detected face from the grayscale image (gray).
+    This is done because eyes are detected inside the face, not the whole image.
+    roi_gray = Grayscale face region only.
+
+frame[y : y + h, x : x + w]
+
+    Extracts the same face area from the original colored image.
+    This is needed to draw rectangles in color.
+    roi_color = Colored face region only.
+
+    
 
 ```sh
 for (ex, ey, ew, eh) in eyes:
     cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 ```
+
+for (ex, ey, ew, eh) in eyes → Loops through all detected eyes.
+
+ex, ey → Top-left corner of the eye.
+ew, eh → Width & height of the eye.
 Draws a green rectangle (color (0, 255, 0)) around detected eyes.
 
 **Display Frames with Detected Faces**
@@ -484,6 +519,9 @@ cv2.imshow(window_title, frame)
 Displays the frame in a window, showing the video feed with rectangles around the detected faces and eyes.
 
 **Exit on ‘q’ or ‘ESC’ Key**
+
+
+
 
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
