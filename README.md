@@ -402,6 +402,80 @@ python3 Haar_face_detecton.py
 ```
 <img src="Haar_face_eye.png" alt="Haar_face_eye_detection" width="400" />
 
+
+The code uses the `cv2.VideoCapture` function to capture video from the camera and apply Haar Cascade classifiers for face and eye detection. It then displays the video stream with detected faces and eyes highlighted by rectangles.
+
+
+
+#### Code Explanation
+
+**Haar Cascades: Pre-trained Models**
+- Haar cascades are pre-trained models for detecting objects such as faces and eyes.
+- The classifiers used in this project are:
+  - **Face detection**: `haarcascade_frontalface_default.xml`
+  - **Eye detection**: `haarcascade_eye.xml`
+
+**Read Frame from the Camera**
+```sh
+While True:
+  ret, frame = video_capture.read()
+```
+ret will be **True** f the frame was successfully captured from the camera.
+
+
+**Face detection works better in grayscale because it reduces computation**
+```sh
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+```
+
+
+**Detect Faces in the Frame**
+
+```sh
+faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+```
+
+detectMultiScale detects objects in an image. It scales the image to detect faces at different sizes.
+
+    1.3 → Scale factor: Image is shrunk to detect faces of various sizes.
+    5 → Minimum neighbors: Filters false detections by requiring a minimum number of nearby faces.
+
+
+**Draw Rectangles Around Faces**
+```sh
+for (x, y, w, h) in faces:
+    cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+
+```
+Draws a blue rectangle (color (255, 0, 0)) around detected faces on the original frame.
+
+**Detect and Draw Rectangles Around Eyes**
+```sh
+roi_gray = gray[y : y + h, x : x + w]
+roi_color = frame[y : y + h, x : x + w]
+eyes = eye_cascade.detectMultiScale(roi_gray)
+```
+
+Extracts the Region of Interest (ROI) of the face.
+Performs eye detection within the ROI.
+
+
+```sh
+for (ex, ey, ew, eh) in eyes:
+    cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
+```
+Draws a green rectangle (color (0, 255, 0)) around detected eyes.
+
+**Display Frames with Detected Faces**
+
+```sh
+cv2.imshow(window_title, frame)
+```
+Displays the frame in a window, showing the video feed with rectangles around the detected faces and eyes.
+
+**Exit on ‘q’ or ‘ESC’ Key**
+
 ## REFERENCE:
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
 - [Jetson AI Lab - Initial Setup](https://www.jetson-ai-lab.com/initial_setup_jon.html)  
