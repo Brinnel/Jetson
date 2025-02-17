@@ -441,6 +441,12 @@ detectMultiScale detects objects in an image. It scales the image to detect face
     1.3 → Scale factor: Image is shrunk to detect faces of various sizes.
     5 → Minimum neighbors: Filters false detections by requiring a minimum number of nearby faces.
 
+minNeighbors controls how many overlapping rectangles are needed.
+
+1-2	Detects many faces, but with lots of false positives.
+3-4	Balanced detection, some false positives possible.
+5-6	Accurate detection, but may miss small faces.
+
 
 **Draw Rectangles Around Faces**
 ```sh
@@ -449,6 +455,9 @@ for (x, y, w, h) in faces:
 
 ```
 Draws a blue rectangle (color (255, 0, 0)) around detected faces on the original frame.
+
+x, y → The top-left corner of the face.
+w, h → The width and height of the face.
 
 **Detect and Draw Rectangles Around Eyes**
 ```sh
