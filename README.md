@@ -376,6 +376,13 @@ In vim, press i to start editing, type your content, then press ESC to exit inse
 
 
 ## IMAE PROCESSING ALGORITHMS
+Approaches:
+1. Sliding window object deetction
+2. Region-based Convolutional Neural Network (R CNN)
+3. Fast R CNN
+4. Faster R CNN
+5. Yolo (You only look once)
+
 
 ```sh
 git clone https://github.com/Brinnel/Jetson.git
@@ -395,7 +402,7 @@ python3 pre_process.py
 <img src="pre_process.png" alt="Grey Output" width="600" />
 
 
-### Python Code to Capture Face and eyes in the video frame using Haar cascades
+### Python Code to Capture Face and eyes in the video frame using Haar cascades (Sliding window object deetction)
 
 ```sh
 python3 Haar_face_detecton.py
@@ -404,6 +411,9 @@ python3 Haar_face_detecton.py
 
 
 The code uses the `cv2.VideoCapture` function to capture video from the camera and apply Haar Cascade classifiers for face and eye detection. It then displays the video stream with detected faces and eyes highlighted by rectangles.
+
+### Python Code to Capture Face and eyes in the video frame using Yolo:
+
 
 
 
@@ -525,6 +535,7 @@ Displays the frame in a window, showing the video feed with rectangles around th
 - [Setup Guide](https://www.youtube.com/watch?v=-PjMC0gyH9s)  
 - [Jetson AI Lab - Initial Setup](https://www.jetson-ai-lab.com/initial_setup_jon.html)  
 - **[Yahboom Jetson Orin NX Study Guide](http://www.yahboom.net/study/Jetson-Orin-NX)**
+- [Yolo](https://www.youtube.com/watch?v=ag3DLKsl2vk)
 
 ## HYPERLINK
 ### CPU Usage
