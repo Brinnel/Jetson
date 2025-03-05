@@ -407,7 +407,16 @@ python3 pre_process.py
 ```sh
 python3 Haar_face_detecton.py
 ```
-<img src="Haar_face_eye.png" alt="Haar_face_eye_detection" width="400" />
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="Haar_face_eye_original.png" alt="Haar_original_image" width="400" />
+  <img src="Haar_face_eye_detected.png" alt="Haar_object_detected_image" width="400" />
+</div>
+
+
+
+
 
 
 The code uses the `cv2.VideoCapture` function to capture video from the camera and apply Haar Cascade classifiers for face and eye detection. It then displays the video stream with detected faces and eyes highlighted by rectangles.
