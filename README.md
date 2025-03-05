@@ -412,24 +412,6 @@ python3 Haar_face_detecton.py
 
 The code uses the `cv2.VideoCapture` function to capture video from the camera and apply Haar Cascade classifiers for face and eye detection. It then displays the video stream with detected faces and eyes highlighted by rectangles.
 
-### Python Code to Capture Face and eyes in the video frame using Yolo:
-
-Install YOLO:
-```sh
-pip install ultralytics
-```
-
-```sh
-python3 Yolo_object_detection.py
-```
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="Yolo_original.png" alt="Yolo_original_image" width="400" />
-  <img src="Yolo_object_detected.jpg" alt="Yolo_object_detected_image" width="400" />
-</div>
-
-
 
 #### Code Explanation
 
@@ -541,6 +523,34 @@ cv2.imshow(window_title, frame)
 Displays the frame in a window, showing the video feed with rectangles around the detected faces and eyes.
 
 **Exit on ‘q’ or ‘ESC’ Key**
+
+
+
+
+### Python Code to Capture Face and eyes in the video frame using Yolo:
+
+Install YOLO:
+```sh
+pip install ultralytics
+```
+
+```sh
+python3 Yolo_object_detection.py
+```
+
+
+### Original Image
+<div style="display: flex; justify-content: space-between;">
+  <img src="Yolo_original.png" alt="Yolo_original_image" width="400" />
+  <img src="Yolo_object_detected.png" alt="Yolo_object_detected_image" width="400" />
+</div>
+
+### Image with Object Detection
+<div style="display: flex; justify-content: space-between;">
+  <img src="Yolo_object_detected.png" alt="Yolo_object_detected_image" width="400" />
+</div>
+
+
 
 
 
