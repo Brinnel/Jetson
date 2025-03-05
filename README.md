@@ -414,6 +414,20 @@ The code uses the `cv2.VideoCapture` function to capture video from the camera a
 
 ### Python Code to Capture Face and eyes in the video frame using Yolo:
 
+Install YOLO:
+```sh
+pip install ultralytics
+```
+
+```sh
+python3 Yolo_object_detection.py
+```
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="Yolo_original.png" alt="Yolo_original_image" width="400" />
+  <img src="Yolo_object_detected.jpg" alt="Yolo_object_detected_image" width="400" />
+</div>
 
 
 
