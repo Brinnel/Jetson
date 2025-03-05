@@ -543,6 +543,9 @@ Install YOLO:
 pip install ultralytics
 ```
 
+For working with YOLO (You Only Look Once) models, Ultralytics provides an excellent library known as ultralytics, which is commonly used to train, fine-tune, and run YOLO models like YOLOv5 and YOLOv8
+
+
 ```sh
 python3 Yolo_object_detection.py
 ```
@@ -553,7 +556,33 @@ python3 Yolo_object_detection.py
   <img src="Yolo_object_detected.jpg" alt="Yolo_object_detected_image" width="400" />
 </div>
 
+#### Code Explanatio
 
+
+```sh
+from ultralytics import YOLO
+```
+Imports the YOLO class from the ultralytics library, which is used to load, train, and use YOLO models for object detection tasks.  
+
+```sh
+model = YOLO("yolov8n.pt") 
+```
+This line loads a pre-trained YOLOv8 model (specifically the Nano version, indicated by yolov8n.pt) from a file. The Nano version is a lightweight model suitable for edge devices or low-resource environments, like Jetson.
+
+```sh
+results = model("/home/jetson/o.png") 
+```
+
+This line uses the model to perform object detection on the image located at the specified path. The model() function takes an image file, runs the detection process and stores the output in the results variable.
+
+```sh
+for result in results:
+    result.show()  # Display the image with bounding boxes
+    result.save("output.jpg")  # Save the results to a file
+ 
+```
+
+The code loops through the results object (handling multiple results if any), displays the image with bounding boxes (result.show()), and saves the processed image to a file (result.save("output.jpg")).
 
 
 ## REFERENCE:
