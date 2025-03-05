@@ -547,7 +547,7 @@ python3 Yolo_object_detection.py
 
 ### Image with Object Detection
 <div style="display: flex; justify-content: space-between;">
-  <img src="Yolo_object_detected.png" alt="Yolo_object_detected_image" width="400" />
+  <img src="Yolo_object_detected.jpg" alt="Yolo_object_detected_image" width="400" />
 </div>
 
 
