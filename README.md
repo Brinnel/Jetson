@@ -656,4 +656,7 @@ for result in results:
     result.show()  # Display the image with bounding boxes
     result.save("output.jpg")  # Save the results to a file
 
+
+pip install ultralytics
+
 ```
