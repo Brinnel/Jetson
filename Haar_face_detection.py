@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO("yolov8n.pt")  # YOLOv8 Nano model
 
 # Perform object detection on your own image
-results = model("/home/jetson/o.png")  # Replace with the path to your image
+results = model("/home/jetson/Yolo_original.png")  # Replace with the path to your image
 
 # Display and save results
 for result in results:
