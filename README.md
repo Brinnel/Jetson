@@ -697,5 +697,14 @@ df -h
 pip3 uninstall -y opencv-python opencv-contrib-python
 ```
 
+```sh
+python3 -c "import cv2; print(cv2.getBuildInformation())"
 
+```
+
+5. Install OpenCV using PIP
+```sh
+pip3 install opencv-python opencv-contrib-python
+
+```
 
