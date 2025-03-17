@@ -691,5 +691,11 @@ Check for free space:
 ```sh
 df -h
 ```
+3. Uninstall OpenCV from Pip
+
+```sh
+pip3 uninstall -y opencv-python opencv-contrib-python
+```
+
 
 
