@@ -164,8 +164,7 @@ Code to start video:
 git clone https://github.com/jetsonhacks/CSI-Camera
 cd /CSI-Camera
 python3 simple_camera.py
-
-  ```
+```
 
 
 
@@ -586,7 +585,7 @@ The code loops through the results object (handling multiple results if any), di
 
 ### Python Code object detection real time using Yolo:
 
-Increase Static TLS Memory: 
+Increase Static [TLS Memory](#tls-memory)  : 
 ```sh
 sudo vi /etc/environment
 ```
@@ -769,6 +768,24 @@ Example: When you open an app, GNOME-Shell handles the smooth animation.
 **Xorg** → Like a projector operator   
 Makes sure the movie (your screen) is displayed properly.  
 Example: If you move a window, Xorg ensures it appears in the right place.  
+
+
+### TLS Memory:
+
+Mechanism in computer systems that allows each thread in a multi-threaded program to have its own private storage for variables. This is useful for storing data that is specific to a thread and should not be shared with other threads.
+
+Static TLS refers to a fixed amount of memory allocated at compile time for thread-local variables.
+
+Each thread in a program has its own copy of these variables, and the memory for them is allocated in a special area called the TLS block.
+
+The size of the static TLS block is limited, and if a program tries to allocate more thread-local variables than the block can hold, you’ll encounter errors like: "cannot allocate memory in static TLS block"
+
+1. Run Without sudo
+
+If you’re running the program with sudo, try running it without elevated privileges. This often resolves the issue because the environment variables and library paths are correctly set for your user.
+2. Increase Static TLS Memory
+
+You can increase the static TLS memory allocation by setting the LD_PRELOAD environment variable to preload the problematic library (e.g., libgomp.so.1).
 
 ### System Crashed
 Recover from system crash
