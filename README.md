@@ -536,7 +536,7 @@ Displays the frame in a window, showing the video feed with rectangles around th
 
 
 
-### Python Code to Capture Face and eyes in the video frame using Yolo:
+### Python Code object detection from the image using Yolo:
 
 Install YOLO:
 ```sh
@@ -556,7 +556,7 @@ python3 Yolo_object_detection.py
   <img src="Yolo_object_detected.jpg" alt="Yolo_object_detected_image" width="400" />
 </div>
 
-#### Code Explanatio
+#### Code Explanation
 
 
 ```sh
@@ -583,6 +583,115 @@ for result in results:
 ```
 
 The code loops through the results object (handling multiple results if any), displays the image with bounding boxes (result.show()), and saves the processed image to a file (result.save("output.jpg")).
+
+### Python Code object detection freal time using Yolo:
+
+Increase Static TLS Memory: 
+```sh
+sudo vi /etc/environment
+```
+
+Edit the file by adding the following line:
+
+```sh
+LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+```
+
+```sh
+sudo reboot
+```
+
+```sh
+python3 yolo_realtime.py
+```
+
+#### Code Explanation
+```sh
+from ultralytics import YOLO
+import cv2
+```
+
+from ultralytics import YOLO → Imports the YOLO model from the Ultralytics library.
+import cv2 → Imports OpenCV, which is used for handling video streams and displaying frames.
+
+```sh
+model = YOLO("yolov8n.pt")  # YOLOv8 Nano model
+```
+YOLO("yolov8n.pt") → Loads the pre-trained YOLOv8 Nano model, fastest and smallest model which is optimized for edge devices like the Jetson Orin NX.
+
+```sh
+gstreamer_pipeline = (
+    "nvarguscamerasrc ! "
+    "video/x-raw(memory:NVMM), width=1280, height=720, framerate=30/1 ! "
+    "nvvidconv ! video/x-raw, format=BGRx ! "
+    "videoconvert ! video/x-raw, format=BGR ! appsink"
+)
+```
+nvarguscamerasrc → This is the GStreamer source for the Raspberry Pi (CSI) camera.
+width=1280, height=720, framerate=30/1 → Sets the camera resolution and frame rate.
+nvvidconv → Converts the frame from NV12 format to BGRx.
+videoconvert → Converts BGRx to standard BGR format, which OpenCV uses.
+appsink → Sends the processed video frames to OpenCV.
+
+
+```sh
+cap = cv2.VideoCapture(gstreamer_pipeline, cv2.CAP_GSTREAMER)
+```
+cv2.VideoCapture(gstreamer_pipeline, cv2.CAP_GSTREAMER) → Opens the CSI camera using the GStreamer pipeline.
+
+
+```sh
+if not cap.isOpened():
+    print("Error: Could not open camera.")
+    exit()
+```
+
+cap.isOpened() → Checks if the camera stream was opened successfully.
+If the camera fails to open, an error message is printed, and the script exits.
+
+```sh
+while True:
+    ret, frame = cap.read()
+    if not ret:
+      print("Error: Failed to capture image.")
+      break
+```
+A while loop is used to continuously read frames from the camera and perform object detection.
+cap.read() → Reads the next frame from the camera.
+ret → A Boolean value indicating if the frame was successfully captured.
+If ret is False, an error message is printed, and the loop exits.
+
+
+``sh
+results = model(frame)
+```     
+model(frame) → Runs YOLOv8 object detection on the captured frame.
+The results contain detected objects, bounding boxes, and confidence scores
+
+
+``sh
+annotated_frame = results[0].plot()
+```
+results[0].plot() → Draws bounding boxes, labels, and confidence scores on the detected objects.
+
+``sh
+cv2.imshow('YOLOv8 Real-Time Object Detection', annotated_frame)
+```
+cv2.imshow() → Opens a window named "YOLOv8 Real-Time Object Detection" and displays the frame with detections.
+
+``sh
+if cv2.waitKey(1) & 0xFF == ord('q'):
+    break
+cap.release()
+cv2.destroyAllWindows()
+```
+cv2.waitKey(1) → Waits for 1 millisecond for a key press.
+ord('q') → If the 'q' key is pressed, the loop breaks, and the program exits.
+cap.release() → Closes the camera stream.
+cv2.destroyAllWindows() → Closes all OpenCV windows.
+
+
+
 
 
 ## REFERENCE:
