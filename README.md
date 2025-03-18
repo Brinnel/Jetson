@@ -609,6 +609,11 @@ python3 yolo_realtime.py
   <img src="yolo_realtime_output.png" alt="Yolo_realtime_object_detected_image" width="400" />
 </div>
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="yolo_realtime_input.jpeg" alt="Original Image" style="width: 400px; height: 400px; object-fit: cover;" />
+  <img src="yolo_realtime_output.png" alt="Detected Objects" style="width: 400px; height: 400px; object-fit: cover;" />
+</div>
+
 
 #### Code Explanation
 ```sh
