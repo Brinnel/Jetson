@@ -374,7 +374,7 @@ vim <file_name>
 In vim, press i to start editing, type your content, then press ESC to exit insert mode. To save and quit, type :wq and press Enter.
 
 
-## IMAE PROCESSING ALGORITHMS
+## IMAGE PROCESSING ALGORITHMS
 Approaches:
 1. Sliding window object deetction
 2. Region-based Convolutional Neural Network (R CNN)
@@ -603,6 +603,12 @@ sudo reboot
 ```sh
 python3 yolo_realtime.py
 ```
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="yolo_realtime_input.jpeg" alt="Yolo_realtime_original_image" width="400" />
+  <img src="yolo_realtime_output.png" alt="Yolo_realtime_object_detected_image" width="400" />
+</div>
+
 
 #### Code Explanation
 ```sh
