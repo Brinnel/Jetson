@@ -604,10 +604,6 @@ sudo reboot
 python3 yolo_realtime.py
 ```
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="yolo_realtime_input.jpeg" alt="Yolo_realtime_original_image" width="400" />
-  <img src="yolo_realtime_output.png" alt="Yolo_realtime_object_detected_image" width="400" />
-</div>
 
 <div style="display: flex; justify-content: space-between;">
   <img src="yolo_realtime_input.jpeg" alt="Original Image" style="width: 400px; height: 400px; object-fit: cover;" />
