@@ -584,7 +584,7 @@ for result in results:
 
 The code loops through the results object (handling multiple results if any), displays the image with bounding boxes (result.show()), and saves the processed image to a file (result.save("output.jpg")).
 
-### Python Code object detection freal time using Yolo:
+### Python Code object detection real time using Yolo:
 
 Increase Static TLS Memory: 
 ```sh
@@ -662,24 +662,23 @@ ret → A Boolean value indicating if the frame was successfully captured.
 If ret is False, an error message is printed, and the loop exits.
 
 
-``sh
+```sh
 results = model(frame)
 ```     
 model(frame) → Runs YOLOv8 object detection on the captured frame.
 The results contain detected objects, bounding boxes, and confidence scores
 
 
-``sh
+```sh
 annotated_frame = results[0].plot()
 ```
 results[0].plot() → Draws bounding boxes, labels, and confidence scores on the detected objects.
 
-``sh
+```sh
 cv2.imshow('YOLOv8 Real-Time Object Detection', annotated_frame)
 ```
 cv2.imshow() → Opens a window named "YOLOv8 Real-Time Object Detection" and displays the frame with detections.
-
-``sh
+```sh
 if cv2.waitKey(1) & 0xFF == ord('q'):
     break
 cap.release()
