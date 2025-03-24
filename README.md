@@ -651,7 +651,7 @@ if not cap.isOpened():
     print("Error: Could not open camera.")
     exit()
 ```
-
+COCO (Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset. It is widely used for training deep learning models like YOLO (You Only Look Once) and other computer vision tasks.
 cap.isOpened() → Checks if the camera stream was opened successfully.
 If the camera fails to open, an error message is printed, and the script exits.
 
@@ -694,6 +694,48 @@ cv2.waitKey(1) → Waits for 1 millisecond for a key press.
 ord('q') → If the 'q' key is pressed, the loop breaks, and the program exits.
 cap.release() → Closes the camera stream.
 cv2.destroyAllWindows() → Closes all OpenCV windows.
+
+COCO (adtaset used for Yolo):
+COCO (Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset. It is widely used for training deep learning models like YOLO (You Only Look Once) and other computer vision tasks.
+
+Download the dataset online:
+1.[COCO Dataset](http://vision.soic.indiana.edu/egohands/)  
+2.Cretae the annotaion file
+3.Organize Folders: 
+
+dataset/
+├── images/
+│   ├── train/  # Training images
+│   └── val/    # Validation images
+└── labels/
+    ├── train/  # YOLO .txt files
+    └── val/
+
+4.1. Install LabelImg
+```sh
+pip install labelImg
+```
+
+
+2. Launch LabelImg
+```sh
+labelImg
+```
+
+3. Annotate Your Images
+
+Open your image folder: Click Open Dir and select the folder containing your .jpg files.
+
+Set YOLO format: Go to View → Ensure Auto Save mode and PascalVOC are unchecked. Then click Format → YOLO.
+
+Draw bounding boxes:
+
+Click Create RectBox and drag to draw boxes around objects (e.g., hands).
+
+Assign a class name (e.g., "hand") when prompted.
+
+Save: Press Ctrl + S to save annotations. LabelImg will create a .txt file for each image automatically.
+
 
 
 
