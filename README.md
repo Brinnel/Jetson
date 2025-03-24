@@ -651,7 +651,7 @@ if not cap.isOpened():
     print("Error: Could not open camera.")
     exit()
 ```
-COCO (Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset. It is widely used for training deep learning models like YOLO (You Only Look Once) and other computer vision tasks.
+
 cap.isOpened() → Checks if the camera stream was opened successfully.
 If the camera fails to open, an error message is printed, and the script exits.
 
@@ -695,14 +695,14 @@ ord('q') → If the 'q' key is pressed, the loop breaks, and the program exits.
 cap.release() → Closes the camera stream.
 cv2.destroyAllWindows() → Closes all OpenCV windows.
 
-COCO (adtaset used for Yolo):
+*COCO (dataset used for Yolo):*  
 COCO (Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset. It is widely used for training deep learning models like YOLO (You Only Look Once) and other computer vision tasks.
 
 Download the dataset online:
 1.[COCO Dataset](http://vision.soic.indiana.edu/egohands/)  
 2.Cretae the annotaion file
 3.Organize Folders: 
-
+```sh
 dataset/
 ├── images/
 │   ├── train/  # Training images
@@ -710,6 +710,8 @@ dataset/
 └── labels/
     ├── train/  # YOLO .txt files
     └── val/
+
+```
 
 4.1. Install LabelImg
 ```sh
