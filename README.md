@@ -699,9 +699,9 @@ cv2.destroyAllWindows() → Closes all OpenCV windows.
 COCO (Common Objects in Context) is a large-scale object detection, segmentation, and captioning dataset. It is widely used for training deep learning models like YOLO (You Only Look Once) and other computer vision tasks.
 
 Download the dataset online:
-1.[COCO Dataset](http://vision.soic.indiana.edu/egohands/)  
-2.Cretae the annotaion file
-3.Organize Folders: 
+1.[COCO Dataset](http://vision.soic.indiana.edu/egohands/)     
+2.Cretae the annotaion file  
+3.Organize Folders:   
 ```sh
 dataset/
 ├── images/
